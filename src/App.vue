@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <kiki-header> </kiki-header>
+    <kiki-homepage>
+     
+    </kiki-homepage>
+    <create-story></create-story>
+    <kiki-footer> </kiki-footer>
+    
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from './components/Header.vue';
+import Homepage from './components/Homepage.vue';
+import Footer from './components/Footer.vue';
+import CreateStory from './components/CreateStory.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'kiki-header': Header,
+    'kiki-footer': Footer,
+    'kiki-homepage': Homepage,
+    'create-story': CreateStory,
+    
   }
 }
 </script>
@@ -23,6 +37,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
