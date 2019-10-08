@@ -3,8 +3,8 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a href="/" class="navbar-brand">
-            <img src="../assets/image/logo.png"></a> 
+            <router-link to="/" class="navbar-brand">
+            <img src="../assets/image/logo.png"></router-link> 
             <button type="button" data-toggle="collapse" 
             data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" 
@@ -16,6 +16,10 @@
             <div id="navbarSupportedContent" class="navbar-collapse collapse" style="">
                 
                  <ul class="navbar-nav mr-auto"></ul> <ul class="navbar-nav ml-auto">
+
+                      <li class="nav-item">
+                         <a href="/" class="nav-link">Home</a>
+                    </li> 
                     <li class="nav-item">
                          <a href="#" class="nav-link">Login</a>
                     </li> 
@@ -23,7 +27,8 @@
                         <a href="#" class="nav-link">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Create your story</a>
+
+                        <router-link class= "nav-link" to="/createstory">Create your story</router-link>
                     </li>
                  </ul>
             </div>

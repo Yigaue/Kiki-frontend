@@ -49,7 +49,7 @@
         <p>
           <i class="fas fa-envelope mr-3"></i> info@kikigmail.com</p>
         <p>
-          <i class="fas fa-phone mr-3"></i> +07032034154</p>
+          <i class="fas fa-phone mr-3"></i> +070 xxx xxxx xxx</p>
         
       </div>
       <!-- Grid column -->

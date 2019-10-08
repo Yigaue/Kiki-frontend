@@ -1,6 +1,6 @@
 <template>
     <!-- Default form contact -->
-    <div class="container-fluid card" p-5>
+    <div class="container card" p-5>
 
     <div class="row">
 
@@ -39,6 +39,7 @@
 </div><!--div/row  -->
 </div><!--div/card  -->
 </template>
+
 <script>
 export default {
     data(){
@@ -61,6 +62,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 
+div.container{
+    margin: 5% auto;
+    border: none;
+}
 </style>

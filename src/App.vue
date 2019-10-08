@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <kiki-header> </kiki-header>
-    <kiki-homepage>
-     
-    </kiki-homepage>
-    <create-story></create-story>
+   <router-view></router-view>
     <kiki-footer> </kiki-footer>
     
     
@@ -14,17 +11,16 @@
 <script>
 
 import Header from './components/Header.vue';
-import Homepage from './components/Homepage.vue';
+
 import Footer from './components/Footer.vue';
-import CreateStory from './components/CreateStory.vue';
+
 
 export default {
   name: 'app',
   components: {
     'kiki-header': Header,
     'kiki-footer': Footer,
-    'kiki-homepage': Homepage,
-    'create-story': CreateStory,
+    
     
   }
 }

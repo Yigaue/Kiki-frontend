@@ -2,8 +2,9 @@
     
     <main class="py-4">
       <h1>{{title}}</h1>
+
       <div class="container-fluid">
-      
+      <section>
       <div class="row">
            
           
@@ -24,9 +25,26 @@
         </div> 
         
       </div> 
+      </section>
        <section>
-           <h2 style="float: right">Create your story</h2>
-           <img style="float: right" src="../assets/image/bg-3.png" alt="">
+
+          <div class="row">
+           
+         <div class="col-md-6 col-md-offset-2">
+             <article>
+            <p>
+              share your story with the world</p>
+              <button  style= "" class="btn btn-primary">Get started</button>
+              </article>
+        </div> 
+         <div class="col-md-4">
+              
+              <span> <h2>Create your story</h2></span>
+            <img class="img-fluid" src="../assets/image/bg-3.png">
+            
+            </div>
+        
+      </div> 
       </section>
 
        <!-- <section>
@@ -74,7 +92,7 @@ h1{
 } */
 article{
    
-    text-align: justify;
+    text-align: left;
     /* padding: 30px;
     width: 30%;
     float:right;
