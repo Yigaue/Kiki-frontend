@@ -24,10 +24,12 @@
         </div> 
         
       </div> 
-       <!-- <section>
-           <h2>Create your story</h2>
-      </section>
        <section>
+           <h2 style="float: right">Create your story</h2>
+           <img style="float: right" src="../assets/image/bg-3.png" alt="">
+      </section>
+
+       <!-- <section>
            <h2>
                Borrow a Book
             </h2>
