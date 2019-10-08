@@ -1,6 +1,6 @@
 # kiki
 
-## Project setup
+## Project setup for Kiki
 ```
 npm install
 ```
