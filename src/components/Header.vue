@@ -18,7 +18,7 @@
                  <ul class="navbar-nav mr-auto"></ul> <ul class="navbar-nav ml-auto">
 
                       <li class="nav-item">
-                         <a href="/" class="nav-link">Home</a>
+                         <router-link to="/" class="nav-link">Home</router-link>
                     </li> 
                     <li class="nav-item">
                          <a href="#" class="nav-link">Login</a>
