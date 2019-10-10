@@ -34,7 +34,7 @@
              <article>
             <p>
               share your story with the world</p>
-             <a href="/createstory"><button  style= "" class="btn btn-primary">Get started</button></a>
+             <router-link to ="/createstory"><button  style= "" class="btn btn-primary">Get started</button></router-link>
               </article>
         </div> 
          <div class="col-md-4">
