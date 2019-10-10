@@ -34,7 +34,7 @@
              <article>
             <p>
               share your story with the world</p>
-              <button  style= "" class="btn btn-primary">Get started</button>
+             <a href="/createstory"><button  style= "" class="btn btn-primary">Get started</button></a>
               </article>
         </div> 
          <div class="col-md-4">
@@ -111,6 +111,7 @@ article{
         background: rgba(255, 0, 43, 0.644);
         border: none;
         font-size: 20px;
+        font-family:sans-serif;
     }
   
 
