@@ -20,12 +20,7 @@
                       <li class="nav-item">
                          <router-link to="/" class="nav-link">Home</router-link>
                     </li> 
-                    <li class="nav-item">
-                         <a href="#" class="nav-link">Login</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Register</a>
-                    </li>
+                    
                     <li class="nav-item">
 
                         <router-link class= "nav-link" to="/stories">Stories</router-link>
@@ -33,6 +28,12 @@
                     <li class="nav-item">
 
                         <router-link class= "nav-link" to="/createstory">Create your story</router-link>
+                    </li>
+                    <li class="nav-item">
+                         <a href="#" class="nav-link">Login</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Register</a>
                     </li>
                  </ul>
             </div>

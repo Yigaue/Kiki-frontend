@@ -11,9 +11,9 @@
 
       <!-- Grid column -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Kiki</h6>
-        <p>Kiki gives you the best book service and feel around the world.
-            Get started here, and the millions of users world. Easy to use interface.
+        <h6 class="text-uppercase mb-4 font-weight-bold"><router-link to ="/">Kiki</router-link></h6>
+        <p>Kiki brings the best stories from around the world.
+            Get started here, and join the millions of users. 
             Write your own beautiful story and share with the world.
         </p>
       </div>
@@ -25,16 +25,20 @@
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Quick links</h6>
         <p>
-          <a href="#!">Create a story</a>
+          <router-link to="/stories">stories</router-link>
+        </p>
+        <p>
+          <router-link to="/createstory">Create a story</router-link>
         </p>
         <p>
           <a href="#!">Sign in</a>
         </p>
+        
         <p>
-          <a href="#!">Register</a>
+          <router-link> href="#!">Register</router-link>
         </p>
         <p>
-          <a href="#!">FAQ</a>
+          <router-link to="/faq">FAQ</router-link>
         </p>
       </div>
 

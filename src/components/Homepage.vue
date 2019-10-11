@@ -8,7 +8,7 @@
       <div class="row">
            
           
-          <div class="col-md-6">
+          <div class="col-md-6 ml-5">
               
               <span> <h2>Read a Story</h2></span>
             <img class="img-fluid" src="../assets/image/bg-2.png">
@@ -18,8 +18,10 @@
          <div class="col-md-3 col-md-offset-2">
              <article>
             <p>
-              On kiki, find your favourite Short Story,
-              follow your writer and share yours</p>
+              Find your favourite Story.
+              Follow your author, and share yours.
+
+              </p>
              <router-link to="/stories"> <button class="btn btn-primary">Get started</button> </router-link>
               </article>
         </div> 
@@ -30,10 +32,12 @@
 
           <div class="row">
            
-         <div class="col-md-6 col-md-offset-2">
-             <article>
+         <div class="col-md-7 ml-5 col-md-offset-2">
+             <article >
             <p>
-              share your story with the world</p>
+             The world is waiting </p>
+             <p>to hear you, 
+             Why wait longer?</p>
              <router-link to ="/createstory"><button  style= "" class="btn btn-primary">Get started</button></router-link>
               </article>
         </div> 
@@ -63,7 +67,7 @@ export default {
     name: 'Homepage',
     data(){
         return{
-            title: 'The Book Barrow'
+            title: 'A shout or a Wisper'
         }
     }
 }
