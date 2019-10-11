@@ -28,7 +28,7 @@
                     </li>
                     <li class="nav-item">
 
-                        <router-link class= "nav-link" to="/createstory">Stories</router-link>
+                        <router-link class= "nav-link" to="/stories">Stories</router-link>
                     </li>
                     <li class="nav-item">
 
