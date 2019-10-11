@@ -24,12 +24,12 @@
 
         <div class="form-group">
        <!-- Send button -->
-    <button v-on:click ="Submit" class="btn btn-primary" type="submit">Create Story</button>
+    <button class="btn btn-primary" type="submit">Create Story</button>
     </div> 
         
 </form>
 </div>
-<div :class ="[{hidden:hidden}, 'col-md-6', 'card-body']" id="preview" style="background-color:#8b769417">
+<div :class ="[{hidden:hidden}, 'col-md-6', 'card-body']" id="preview" style="background-color:rgba(240, 236, 242, 0.09)">
     <h3 >Preview story</h3>
          <p>Title: {{story.title}}</p>
         <p>author: {{story.author}}</p>
@@ -51,14 +51,12 @@ export default {
             content: "",
             author: "",
             },
-           'is-valid' : false,
+           
            hidden: true,
         }
     },
     methods: {
-        Submit() {
-            // this.is-valid;
-        },
+        
         showPreview: function () {
             this.hidden = false;
              

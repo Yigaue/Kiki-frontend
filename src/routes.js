@@ -1,7 +1,9 @@
 import CreateStory from "./components/CreateStory.vue";
 import Homepage from "./components/Homepage.vue";
+import Stories from "./components/Stories.vue";
 
 export default [
     {path:'/', component: Homepage},
-    {path: '/createstory', component: CreateStory}
+    {path: '/createstory', component: CreateStory},
+    {path: '/stories', component: Stories}
 ]

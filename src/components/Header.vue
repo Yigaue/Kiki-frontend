@@ -28,6 +28,10 @@
                     </li>
                     <li class="nav-item">
 
+                        <router-link class= "nav-link" to="/createstory">Stories</router-link>
+                    </li>
+                    <li class="nav-item">
+
                         <router-link class= "nav-link" to="/createstory">Create your story</router-link>
                     </li>
                  </ul>

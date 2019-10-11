@@ -10,7 +10,7 @@
           
           <div class="col-md-6">
               
-              <span> <h2>Read a book</h2></span>
+              <span> <h2>Read a Story</h2></span>
             <img class="img-fluid" src="../assets/image/bg-2.png">
             
             </div>
@@ -18,9 +18,9 @@
          <div class="col-md-3 col-md-offset-2">
              <article>
             <p>
-              Find your favourite Book or Author,
-              and dive deep</p>
-              <button class="btn btn-primary">Get started</button>
+              On kiki, find your favourite Short Story,
+              follow your writer and share yours</p>
+             <router-link to="/stories"> <button class="btn btn-primary">Get started</button> </router-link>
               </article>
         </div> 
         
