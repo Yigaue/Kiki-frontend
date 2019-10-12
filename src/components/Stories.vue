@@ -88,10 +88,13 @@ wrote his last will, leaving much of his wealth to the establishment of the Nobe
 
 <p><b>Moral </b>:<em> It is never late to start over.</em></p>
     </article>
-
+    
     <article class="container mb-4 p-3">
-     <header><h1>THE EIGHTEENTH CAMEL </h1>
+     <header>
+         <router-link to="/story-the-eighteenth-camel">
+         <h1>THE EIGHTEENTH CAMEL </h1>
      <img class = "img-fluid p-3" src="../assets/image/camels.png">
+     </router-link>
      </header>
       
   A wealthy merchant from the east passed away. In his will, the man stated equally 
@@ -119,12 +122,34 @@ first step is to believe that there is a solution. If we think that there is no 
 anywhere!</em></p>
     </article>
     
+    
     </section>
 </template>
 
 <script>
 export default {
-    
+    data(){
+        return{
+
+            story:
+            {
+                 title: "",
+            content: "",
+            author: "",
+            },
+           submitted: false,
+           hidden: true,
+        }
+    },
+   methods: {
+
+   } ,
+   created () {
+       this.$http.get('https://kiki-bc8c1.firebaseio.com/posts.json').then(function(data){
+           
+           console.log(data);
+       });
+   }
 }
 </script>
 <style scoped>

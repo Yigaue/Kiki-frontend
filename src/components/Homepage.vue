@@ -10,7 +10,7 @@
           
           <div class="col-md-6 ml-5">
               
-              <span> <h2>Read a Story</h2></span>
+              <span> <h2>Find a Story</h2></span>
             <img class="img-fluid" src="../assets/image/bg-2.png">
             
             </div>
@@ -18,11 +18,10 @@
          <div class="col-md-3 col-md-offset-2">
              <article>
             <p>
-              Find your favourite Story.
-              Follow your author, and share yours.
-
+              Connect to the story you love
+              and be inspired
               </p>
-             <router-link to="/stories"> <button class="btn btn-primary">Get started</button> </router-link>
+            <router-link to="/stories"> <button class="btn btn-primary">Get started</button> </router-link>
               </article>
         </div> 
         
@@ -32,18 +31,18 @@
 
           <div class="row">
            
-         <div class="col-md-7 ml-5 col-md-offset-2">
+         <div class="col-md-6 ml-5 col-md-offset-2">
              <article >
             <p>
-             The world is waiting </p>
-             <p>to hear you, 
-             Why wait longer?</p>
-             <router-link to ="/createstory"><button  style= "" class="btn btn-primary">Get started</button></router-link>
+            
+             Let the world find you, and share your experience</p>
+            
+             <router-link to ="/createstory"><button  style= "" class="create btn btn-primary">Get started</button></router-link>
               </article>
         </div> 
          <div class="col-md-4">
               
-              <span> <h2>Create your story</h2></span>
+              <span> <h2>Share your story</h2></span>
             <img class="img-fluid" src="../assets/image/bg-3.png">
             
             </div>
@@ -117,12 +116,22 @@ article{
         font-size: 20px;
         font-family:sans-serif;
     }
-  
+ 
 
 h2{
     text-align: left;
     color: rgb(65, 10, 10);
     font-size: 70px;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+pre{
+    font-family: cursive;
+    color: #96810dcc;
+    overflow: hidden;
+    white-space: pre-wrap;
+  word-wrap:inherit;
+  text-align: left;
+    
 }
 </style>

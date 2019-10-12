@@ -5,7 +5,7 @@
     <div class="row">
 
 <div class="col-md-6" style="background-color: #ddcee27a">
-    <form class="p-2">
+    <form v-if="!submitted" class="p-2">
     <h2 class="h4 mb-4">Create a Story</h2>
        
     <div class="form-group col-md-6">
@@ -24,7 +24,7 @@
 
         <div class="form-group">
        <!-- Send button -->
-    <button class="btn btn-primary" type="submit">Create Story</button>
+    <button v-on:click.prevent = "post" class="btn btn-primary" type="submit">Create Story</button>
     </div> 
         
 </form>
@@ -36,6 +36,7 @@
         <p>content: </p>
         <p class="card preview">{{story.content}}</p>
         </div>
+        <div v-if="submitted" class="alert alert-success fade out show" role = "alert"><p>Thanks for sharing your story</p></div>
 </div><!--div/row  -->
 </div><!--div/card  -->
 </template>
@@ -51,12 +52,18 @@ export default {
             content: "",
             author: "",
             },
-           
+           submitted: false,
            hidden: true,
         }
     },
     methods: {
-        
+
+        post: function() {
+            this.$http.post('https://kiki-bc8c1.firebaseio.com/posts.json',this.story).then(function(data){
+                 console.log(data); 
+                this.submitted = true;
+            });
+    },
         showPreview: function () {
             this.hidden = false;
              

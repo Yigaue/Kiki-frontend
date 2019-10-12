@@ -11,8 +11,8 @@
 
       <!-- Grid column -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold"><router-link to ="/">Kiki</router-link></h6>
-        <p>Kiki brings the best stories from around the world.
+        <h6 class="text-uppercase mb-4 font-weight-bold">About</h6>
+        <p>Kiki brings the best stories from around the planet.
             Get started here, and join the millions of users. 
             Write your own beautiful story and share with the world.
         </p>
@@ -70,10 +70,10 @@
       <div class="col-md-7 col-lg-8">
 
         <!--Copyright-->
-        <p class="text-center text-md-left">© 2019 Copyright:
-          <a href="#">
-            <strong> Kiki</strong>
-          </a>
+        <p class="text-center text-md-left"> &copy;
+          <router-link to="/">
+            <strong> Kiki 2019 </strong>
+          </router-link>
         </p>
 
       </div>
@@ -134,7 +134,7 @@ export default {
 <style scoped>
 
 footer{
-    background:rgba(150, 129, 13, 0.801);
+   background: rgb(146, 116, 116);
     color: #fff;
     
 }
@@ -142,6 +142,6 @@ a {
     color: #fff;
 }
 h6{
-    color:rgb(6, 63, 63);
+    color:rgba(202, 247, 232, 0.94);
 }
 </style>

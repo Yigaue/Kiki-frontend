@@ -4,6 +4,7 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import VueRouter from 'vue-router'
 import Routes from './routes'
+import VueResource from 'vue-resource'
 
 import  {library} from '@fortawesome/fontawesome-svg-core'
 import  {faSpinner}  from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +20,12 @@ library.add(faSpinner);
 
 Vue.use('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
+Vue.use(VueResource)
 Vue.config.productionTip = false;
+Vue.filter('extract', function (value) {
+  if(!value) return ''
+  value = value.slice(0, 200);
+});
 
 let router = new VueRouter({
 routes: Routes,
