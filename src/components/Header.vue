@@ -14,12 +14,7 @@
             </button> 
             <div id="navbarSupportedContent" class="navbar-collapse collapse" style="">
 
-                <form class="form-inline narbar-light bg-light ml-4 mr-4">
-      <div class="md-form my-0">
-        <input class="form-control" type="text" placeholder="Search this site" aria-label="Search">
-      </div>
-      <button href="#!" class="btn btn-outline-secondary btn-md my-0 ml-sm-1" type="submit">Search</button>
-    </form>
+                
                  <ul class="navbar-nav mr-auto"></ul> <ul class="navbar-nav ml-auto">
                       <li class="nav-item">
                          <router-link exact to="/" class="nav-link">Home</router-link>
@@ -34,10 +29,10 @@
                         <router-link exact class= "nav-link" to="/createstory">Create your story</router-link>
                     </li>
                     <li class="nav-item">
-                         <a href="#" class="nav-link">Login</a>
+                         <router-link to="/login" class="nav-link">Login</router-link>
                     </li> 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Register</a>
+                        <router-link to="/register" class="nav-link">Register</router-link>
                     </li>
                  </ul>
             </div>

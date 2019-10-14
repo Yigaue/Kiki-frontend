@@ -22,9 +22,9 @@ Vue.use('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.config.productionTip = false;
-Vue.filter('extract', function (value) {
-  if(!value) return ''
-  value = value.slice(0, 200);
+Vue.filter('extract-content', function (value) {
+  
+  return value.slice(0, 500)+ '...';
 });
 
 let router = new VueRouter({

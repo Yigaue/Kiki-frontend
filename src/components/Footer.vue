@@ -31,11 +31,11 @@
           <router-link to="/createstory">Create a story</router-link>
         </p>
         <p>
-          <a href="#!">Sign in</a>
+          <router-link to="/login">Sign in</router-link>
         </p>
         
         <p>
-          <router-link> href="#!">Register</router-link>
+          <router-link to="/register">Register</router-link>
         </p>
         <p>
           <router-link to="/faq">FAQ</router-link>
