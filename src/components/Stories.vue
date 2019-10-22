@@ -52,7 +52,7 @@ export default {
     //               })
  
     axios
-    .get('http://kikiapp-api.herokuapp.com/api/stories')
+    .get('https://kikiapp-api.herokuapp.com/api/stories')
     .then(response => {
        this.stories = response.data })
        .catch(error=> console.log(error))
