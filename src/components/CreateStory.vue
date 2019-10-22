@@ -6,34 +6,34 @@
 
 <div class="col-md-6" style="background-color: #ddcee27a">
     <form v-if="!submitted" class="p-2">
-    <h2 class="h4 mb-4">Create a Story</h2>
+    <h2 class="h4 mb-4 p-4">Create a Story</h2>
        
-    <div class="form-group col-md-6">
-    <label for="exampleFormControlInput1">Title</label>
-    <input v-on:keyup ="showPreview" v-model.lazy ="story.title" type="text" id="defaultContactFormName" class="form-control " placeholder="Title">
+    <div class="form-group col-md-9">
+    <input v-on:keypress ="showPreview" v-model.lazy ="story.title" type="text" id="defaultContactFormName" class="form-control " placeholder="Title">
     </div>
-    <div class="form-group col-md-6">
-    <label>Author</label>
+    <div class="form-group col-md-6 create-story-img float-right">
+        <img src="../assets/image/bg-2.png" class = "img-fluid" alt="create story image" width="200px" height="200px">
+    </div>
+    <div class="form-group col-md-9">
     <input v-model.lazy ="story.author" type="text" id="defaultContactFormEmail" class="form-control" placeholder="Author">
     </div>
    
-    <label>Content</label>
-    <div class="form-group">
+    
+    <div class="form-group col-md-12">
         <textarea v-model ="story.content" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="5" col = "7" placeholder="Write your story"></textarea>
     </div>
 
         <div class="form-group">
        <!-- Send button -->
-    <button v-on:click.prevent = "post" class="btn btn-primary" type="submit">Create Story</button>
+    <button v-on:click.prevent = "post" :class="[{hidden:hidden}, 'btn', 'btn-primary']" type="submit">Create Story</button>
     </div> 
         
 </form>
 </div>
 <div :class ="[{hidden:hidden}, 'col-md-6', 'card-body']" id="preview" style="background-color:rgba(240, 236, 242, 0.09)">
     <h3 >Preview story</h3>
-         <p>Title: {{story.title}}</p>
-        <p>author: {{story.author}}</p>
-        <p>content: </p>
+         <p class="story-title">{{story.title}}</p>
+        <p>{{story.author}}</p>
         <p class="card preview">{{story.content}}</p>
         </div>
         <div v-if="submitted" class="alert alert-success fade out show" role = "alert"><p>Thanks for sharing your story</p></div>
@@ -42,28 +42,41 @@
 </template>
 
 <script>
+//import axios from 'axios'
 export default {
     data(){
         return{
 
             story:
             {
-                 title: "",
+                  title: "",
             content: "",
             author: "",
             },
            submitted: false,
            hidden: true,
+           
         }
     },
-    methods: {
+    // mounted (){
+    //     axios
+    //     .post('http;//127.0.0.1:8000/api/stories', this.story)
+    //     .then(response=>{
+    //            console.log(response)
+    //         this.submitted = true;
+    //     })
 
+    // },
+    methods: {
+      //  This works perfect with vue http resource
         post: function() {
-            this.$http.post('https://kiki-bc8c1.firebaseio.com/posts.json',this.story).then(function(data){
+            this.$http.post('http://kikiapp-api.herokuapp.com/api/stories',this.story).then(function(data){
                  console.log(data); 
                 this.submitted = true;
             });
+
     },
+    
         showPreview: function () {
             this.hidden = false;
              
@@ -80,7 +93,8 @@ div.container{
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
+    
 }
 
  button {
@@ -94,4 +108,95 @@ p.preview{
     overflow-y: scroll;
     height: 400px;
 }    
+
+div.create-story-img{
+    position: relative;
+    bottom: 7px;
+   
+}
+
+@media all and (max-width: 767px){
+div.create-story-img{
+    position: relative;
+    bottom: 7px;
+   
+}
+.hidden{
+
+    display: none;
+}
+ button.btn-primary{
+     position: relative;
+     bottom : -620px;
+     font-size: 18px;
+     
+    }
+ 
+}
+ @media all and (max-width: 600px){
+
+
+
+ button.btn-primary{
+     position: relative;
+     bottom : -617px;
+      height: 40px;
+      width: 150px;
+      font-size: 18px;
+     
+    }
+ 
+} 
+
+@media only all and (max-width: 250px){
+
+
+
+ button.btn-primary{
+     position: relative;
+     bottom : -610px;
+      height: 30px;
+      width: 100px;
+      font-size: 12px;
+     
+    }
+ 
+}
+@media all and (max-width: 211px){
+
+
+
+ button.btn-primary{
+     position: relative;
+     bottom : -635px;
+      height: 30px;
+      width: 100px;
+      font-size: 12px;
+     
+    }
+ 
+}
+
+label {
+    float: left;
+}
+input{
+    border: none;
+    width: 100%;
+}
+p.card.preview{
+    border: none;
+}
+textarea{
+    border: none;
+}
+p.story-title{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    color: rgba(13, 13, 201, 0.705);
+    word-spacing: 0.3 em;
+}
+
 </style>

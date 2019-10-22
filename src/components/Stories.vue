@@ -6,26 +6,29 @@
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
       
-      <div v-for="story in stories" :key="story.title">
+      <div v-for="story in stories" :key="story.id">
      <router-link v-bind:to="'/story/'+ story.id"><h2 class="p-2"> {{story.title}}
      </h2></router-link>
       <span> By {{story.author}}</span>
+      <span> {{story.image}}</span>
     <!-- <img class = "img-fluid p-3" src="../assets/image/box.jpg"> -->
      
       <article class="container mb-4 p-3">
           {{story.content | extract-content}}
     </article>
 </div>
-
-    
+     
     </section>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     data(){
         return{
-            stories:[],
+            stories: null,
+            
            submitted: false,
            hidden: true,
             search: ''
@@ -34,19 +37,27 @@ export default {
    methods: {
 
    } ,
-   
-   created () {
-       this.$http.get('https://kiki-bc8c1.firebaseio.com/posts.json').then(function(data){
-           return data.json();
-       }).then(function(data){
-             let storyArray = [];
-           for (let key in data){
-               data[key].id = key;
-               storyArray.push(data[key]);
-           }
-           this.stories = storyArray;
-       })
-   },
+  
+   mounted () {
+                    /*This works using Vue Http resources */
+    //           this.$http.get('http://127.0.0.1:8000/api/stories').then(function(data){
+    //        return data.json();
+    //    }).then(function(data){
+    //          let storyArray = [];
+    //        for (let key in data){
+    //            data[key].id = key;
+    //            storyArray.push(data[key]);
+    //        }
+    //        this.stories = storyArray;
+    //               })
+ 
+    axios
+    .get('http://kikiapp-api.herokuapp.com/api/stories')
+    .then(response => {
+       this.stories = response.data })
+       .catch(error=> console.log(error))
+
+        },
    computed: {
        searchStories: function (){
            return this.stories.filter((story) => {

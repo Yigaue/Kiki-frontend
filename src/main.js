@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import VueRouter from 'vue-router'
 import Routes from './routes'
 import VueResource from 'vue-resource'
+// import axios from 'axios'
 
 import  {library} from '@fortawesome/fontawesome-svg-core'
 import  {faSpinner}  from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +18,7 @@ dom.watch()
 library.add(fab);
 library.add(fas);
 library.add(faSpinner);
-
+// axios.defaults.baseUrl = 'http://127.0.0.1:8000/api'
 Vue.use('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
 Vue.use(VueResource)
