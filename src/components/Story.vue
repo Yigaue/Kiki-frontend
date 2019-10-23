@@ -42,7 +42,7 @@ export default {
   //  }
   mounted() {
   axios
-    .get('http://kikiapp-api.herokuapp.com/api/story/'+ this.id)
+    .get('https://kikiapp-api.herokuapp.com/api/story/'+ this.id)
     .then(response => {
        this.story = response.data
     })

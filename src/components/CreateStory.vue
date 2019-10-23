@@ -70,7 +70,7 @@ export default {
     methods: {
       //  This works perfect with vue http resource
         post: function() {
-            this.$http.post('http://kikiapp-api.herokuapp.com/api/stories',this.story).then(function(data){
+            this.$http.post('https://kikiapp-api.herokuapp.com/api/stories',this.story).then(function(data){
                  console.log(data); 
                 this.submitted = true;
             });
