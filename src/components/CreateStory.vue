@@ -15,6 +15,9 @@
         <img src="../assets/image/bg-2.png" class = "img-fluid" alt="create story image" width="200px" height="200px">
     </div>
     <div class="form-group col-md-9">
+    <input v-model.lazy ="story.image" type="text" id="defaultContactFormEmail" class="form-control" placeholder="image url">
+    </div>
+    <div class="form-group col-md-9">
     <input v-model.lazy ="story.author" type="text" id="defaultContactFormEmail" class="form-control" placeholder="Author">
     </div>
    
