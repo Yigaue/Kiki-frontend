@@ -9,10 +9,20 @@
     <h2 class="h4 mb-4 p-4">Create a Story</h2>
        
     <div class="form-group col-md-9">
-    <input v-on:keypress ="showPreview" v-model.lazy ="story.title" type="text" id="defaultContactFormName" class="form-control " placeholder="Title">
+    <input v-on:keypress ="showPreview()" v-model.lazy ="story.title" type="text" id="defaultContactFormName" class="form-control " placeholder="Title">
     </div>
-    <div class="form-group col-md-6 create-story-img float-right">
-        <img src="../assets/image/bg-2.png" class = "img-fluid" alt="create story image" width="200px" height="200px">
+    
+    <div class="form-group col-md-6 create-story-img float-right" @mouseover="showImageTip()" @mouseout="removeImageTip()">
+        <img src="../assets/image/bg-2.png" class = "img-fluid" alt="create story image" width="100px" height="100px">
+         <img src="../assets/image/bg-2.png" class = "img-fluid" alt="create story image" width="100px" height="100px">
+  <input type="file" class="form-control" data-classIcon = "icon-plus" title="add an image file">
+      
+    </div>
+   
+    <div class="form-group col-md-6 create-story-img float-right" @mouseover="showImageTip()" @mouseout="removeImageTip()">
+        
+        <p :class="[{imagetip:imagetip}, 'p-3']">Add an image to make your story colorful</p>
+       
     </div>
     <div class="form-group col-md-9">
     <input v-model.lazy ="story.image" type="text" id="defaultContactFormEmail" class="form-control" placeholder="image url">
@@ -58,6 +68,7 @@ export default {
             },
            submitted: false,
            hidden: true,
+           imagetip:true,
            
         }
     },
@@ -77,13 +88,23 @@ export default {
                  console.log(data); 
                 this.submitted = true;
             });
-
-    },
     
-        showPreview: function () {
+    },
+    showPreview() {
             this.hidden = false;
              
+        },
+        showImageTip(){
+            this.imagetip = false;
+          
+        },
+        removeImageTip(){
+            this.imagetip = true;
         }
+    },
+       
+    computed: {
+ 
     }
 }
 </script>
@@ -96,10 +117,14 @@ div.container{
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
     
 }
 
+.imagetip {
+    visibility: hidden;
+    
+}
  button {
     
         background: rgba(255, 0, 43, 0.644);
@@ -107,6 +132,7 @@ div.container{
         font-size: 20px;
     }
 
+ 
 p.preview{
     overflow-y: scroll;
     height: 400px;
@@ -128,6 +154,7 @@ div.create-story-img{
 
     display: none;
 }
+
  button.btn-primary{
      position: relative;
      bottom : -620px;
