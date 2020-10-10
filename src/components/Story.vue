@@ -1,27 +1,25 @@
 <template>
-
   <section>
-      <form class="form-inline my-4 my-lg-5 container">
+    <form class="form-inline my-4 my-lg-5 container">
       <input class="form-control mr-sm-2" type="search"  v-model="search" placeholder="Search stories" aria-label="Search">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
     <div v-if="errored">
       <p>Ops!!! seems you lost your connection</p>
     </div>
-    <div v-else class="content">
-    <div v-if="loading" class="loader"></div>
+  <div v-else class="content">
+     <div v-if="loading" class="loader"></div>
     <div v-for="story in story" :key ="story.id">
-     <header><h1 class="p-2"> {{story.title}}</h1>
-      <span> By {{story.author}}</span>
-    <img class = "img-fluid p-3" src="../assets/image/box.jpg">
-  
-     </header>
+      <header><h1 class="p-2"> {{story.title}}</h1>
+        <span> By {{story.author}}</span>
+        <img class = "img-fluid p-3" src="../assets/image/box.jpg">
+      </header>
       <article class="container mb-4 p-3">
           {{story.content}}
-    </article>
+      </article>
       </div>
-      </div>
-    </section>
+  </div>
+ </section>
 </template>
 
 <script>

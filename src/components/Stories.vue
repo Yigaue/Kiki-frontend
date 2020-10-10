@@ -84,8 +84,8 @@ img{
   clear: both;
 }
 .loader {
-  border: 5px solid #9e9696a2; /* Light grey */
-  border-top: 5px solid rgb(121, 88, 88); /* Blue */
+  border: 5px solid #9e9696a2;
+  border-top: 5px solid rgb(121, 88, 88);
   border-radius: 50%;
   width: 50px;
   height: 50px;
