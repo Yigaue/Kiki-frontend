@@ -10,11 +10,10 @@
     </div>
     <div v-else class="content">
     <div v-if="loading" class="loader"></div>
-     <div v-for="story in story" :key ="story.id">
-     <header><h1 class="p-2"> {{story.title}}
-     </h1>
+    <div v-for="story in story" :key ="story.id">
+     <header><h1 class="p-2"> {{story.title}}</h1>
       <span> By {{story.author}}</span>
-    <!-- <img class = "img-fluid p-3" src="../assets/image/box.jpg"> -->
+    <img class = "img-fluid p-3" src="../assets/image/box.jpg">
   
      </header>
       <article class="container mb-4 p-3">

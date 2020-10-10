@@ -11,7 +11,8 @@
       <div v-if="loading" class="loader"></div>
         <div  v-else v-for="story in stories" :key="story.id">
             <router-link v-bind:to="'/story/'+ story.id">
-                <h2 class="p-2"> {{story.title}}</h2>
+                <h2 class="p-2"> {{story.title}}</h2> 
+            <img class = "img-fluid p-3" src="../assets/image/box.jpg">
             </router-link>
             <span> By {{story.author}}</span>
             <span> {{story.image}}</span>
@@ -77,8 +78,8 @@ h2{
     text-transform:uppercase;
 }
 img{
-    width: 250px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     float: left;
   clear: both;
 }
