@@ -120,9 +120,6 @@ footer{
     color: #fff;
     width: 100%;
     height: 50%;
-    bottom: 0px;
-    margin-top: 50px;
-    position: absolute;
 }
 a {
     color: #fff;

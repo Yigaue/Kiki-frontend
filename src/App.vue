@@ -4,7 +4,7 @@
       <kiki-header> </kiki-header>
       <router-view></router-view>
     </main>
-    <kiki-footer> </kiki-footer>
+      <kiki-footer class="footer"> </kiki-footer>
   </div>
 </template>
 <script>
@@ -31,4 +31,8 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.footer {
+  display: none;
+}
+
 </style>
