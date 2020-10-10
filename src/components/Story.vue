@@ -8,6 +8,7 @@
     <div v-if="errored">
       <p>Ops!!! seems you lost your connection</p>
     </div>
+    <div v-else class="content">
     <div v-if="loading" class="loader"></div>
      <div v-for="story in story" :key ="story.id">
      <header><h1 class="p-2"> {{story.title}}
@@ -19,6 +20,7 @@
       <article class="container mb-4 p-3">
           {{story.content}}
     </article>
+      </div>
       </div>
     </section>
 </template>
@@ -87,6 +89,7 @@ img{
   100% { transform: rotate(360deg); }
 }
 .content {
-    margin: 50px;
+    margin: auto;
+    width: 60%;
 }
 </style>

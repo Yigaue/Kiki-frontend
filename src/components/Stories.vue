@@ -97,6 +97,7 @@ img{
   100% { transform: rotate(360deg); }
 }
 .content {
-    margin: 50px;
+    width: 60%;
+    margin: auto;
 }
 </style>
