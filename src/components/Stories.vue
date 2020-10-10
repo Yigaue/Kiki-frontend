@@ -51,7 +51,7 @@ export default {
             console.log(error)
             this.error = true;
         })
-        .finally(() => this.loading = true)
+        .finally(() => this.loading = false)
             },
         computed: {
         searchStories: function (){
