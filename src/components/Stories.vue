@@ -5,11 +5,10 @@
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
     <div v-if="errored">
-      <p>Ops!!!</p>
-      <span>{{errorMessage}}</span>
+      <p>Ops!!! seems you lost your connection</p>
     </div>
-    <div v-else>
-      <div v-if="loading">Loading...</div>
+    <div v-else class="cotent">
+      <div v-if="loading" class="loader"></div>
         <div  v-else v-for="story in stories" :key="story.id">
             <router-link v-bind:to="'/story/'+ story.id">
                 <h2 class="p-2"> {{story.title}}</h2>
@@ -52,7 +51,7 @@ export default {
             console.log(error)
             this.error = true;
         })
-        .finally(() => this.loading = false)
+        .finally(() => this.loading = true)
             },
         computed: {
         searchStories: function (){
@@ -82,5 +81,22 @@ img{
     height: 220px;
     float: left;
   clear: both;
+}
+.loader {
+  border: 5px solid #9e9696a2; /* Light grey */
+  border-top: 5px solid rgb(121, 88, 88); /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.2s linear infinite;
+  margin:auto
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.content {
+    margin: 50px;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
     <!-- Footer -->
 <!-- Footer -->
+
 <footer class="page-footer font-small mdb-color pt-4">
 
   <!-- Footer Links -->
@@ -118,7 +119,10 @@ footer{
    background: rgb(146, 116, 116);
     color: #fff;
     width: 100%;
-    height: 100%;
+    height: 50%;
+    bottom: 0px;
+    margin-top: 50px;
+    position: absolute;
 }
 a {
     color: #fff;

@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <main>
-    <kiki-header> </kiki-header>
-    <router-view></router-view>
-    <kiki-footer> </kiki-footer>
+    <main class="container">
+      <kiki-header> </kiki-header>
+      <router-view></router-view>
     </main>
+    <kiki-footer> </kiki-footer>
   </div>
 </template>
 <script>
@@ -19,8 +19,6 @@ export default {
   components: {
     'kiki-header': Header,
     'kiki-footer': Footer,
-    
-    
   }
 }
 </script>
@@ -32,6 +30,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
 }
 </style>
