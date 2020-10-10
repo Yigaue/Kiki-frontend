@@ -26,7 +26,7 @@ export default {
     data(){
         return{
           id: this.$route.params.id,
-            story:null,
+          story:null,
            submitted: false,
            hidden: true,
             search: ''

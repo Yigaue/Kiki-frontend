@@ -14,7 +14,7 @@
         <h6 class="text-uppercase mb-4 font-weight-bold">About</h6>
         <p>Kiki brings the best stories from around the planet.
             Get started here, and join the millions of users. 
-            Write your own beautiful story and share with the world.
+            Write your own story and share with the world.
         </p>
       </div>
       <!-- Grid column -->

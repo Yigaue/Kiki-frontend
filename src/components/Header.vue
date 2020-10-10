@@ -14,7 +14,6 @@
             </button> 
             <div id="navbarSupportedContent" class="navbar-collapse collapse" style="">
 
-                
                  <ul class="navbar-nav mr-auto"></ul> <ul class="navbar-nav ml-auto">
                       <li class="nav-item">
                          <router-link exact to="/" class="nav-link">Home</router-link>
@@ -58,9 +57,7 @@ h1{
     font-family: cursive;
 }
 .router-link-active{
-    border-bottom: 0.1em solid#96810dcc;
-   
-   
+    border-bottom: 0.1em solid#96810dcc; 
 }
 </style>
 
