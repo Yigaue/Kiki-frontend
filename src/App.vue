@@ -2,12 +2,11 @@
   <div id="app">
     <main>
     <kiki-header> </kiki-header>
-   <router-view></router-view>
+    <router-view></router-view>
     <kiki-footer> </kiki-footer>
     </main>
   </div>
 </template>
-
 <script>
 
 import Header from './components/Header.vue';

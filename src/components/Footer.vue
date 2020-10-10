@@ -19,48 +19,29 @@
       </div>
       <!-- Grid column -->
 
-      
-
       <!-- Grid column -->
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Quick links</h6>
-        <p>
-          <router-link to="/stories">stories</router-link>
-        </p>
-        <p>
-          <router-link to="/createstory">Create a story</router-link>
-        </p>
-        <p>
-          <router-link to="/login">Sign in</router-link>
-        </p>
-        
-        <p>
-          <router-link to="/register">Register</router-link>
-        </p>
-        <p>
-          <router-link to="/faq">FAQ</router-link>
-        </p>
+        <p><router-link to="/stories">stories</router-link></p>
+        <p><router-link to="/createstory">Create a story</router-link></p>
+        <p><router-link to="/login">Sign in</router-link></p>
+        <p><router-link to="/register">Register</router-link></p>
+        <p><router-link to="/faq">FAQ</router-link></p>
       </div>
 
       <!-- Grid column -->
       <hr class="w-100 clearfix d-md-none">
-
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-        <p>
-          <i class="fas fa-home mr-3"></i> Kiki Worldworld</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i> info@kikigmail.com</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> +070 xxx xxxx xxx</p>
-        
+        <p><i class="fas fa-home mr-3"></i> Kiki International</p>
+        <p><i class="fas fa-envelope mr-3"></i> info@kikigmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +070 xxx xxxx xxx</p>
       </div>
       <!-- Grid column -->
 
     </div>
     <!-- Footer links -->
-
     <hr>
 
     <!-- Grid row -->
@@ -72,7 +53,7 @@
         <!--Copyright-->
         <p class="text-center text-md-left"> &copy;
           <router-link to="/">
-            <strong> Kiki 2019 </strong>
+            <strong>2020</strong>
           </router-link>
         </p>
 
@@ -136,7 +117,8 @@ export default {
 footer{
    background: rgb(146, 116, 116);
     color: #fff;
-    
+    width: 100%;
+    height: 100%;
 }
 a {
     color: #fff;
