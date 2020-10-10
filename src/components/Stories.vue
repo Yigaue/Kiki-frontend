@@ -7,7 +7,7 @@
     <div v-if="errored">
       <p>Ops!!! seems you lost your connection</p>
     </div>
-    <div v-else class="cotent">
+    <div v-else class="content">
       <div v-if="loading" class="loader"></div>
         <div  v-else v-for="story in stories" :key="story.id">
             <router-link v-bind:to="'/story/'+ story.id">

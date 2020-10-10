@@ -5,7 +5,10 @@
       <input class="form-control mr-sm-2" type="search"  v-model="search" placeholder="Search stories" aria-label="Search">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
-      
+    <div v-if="errored">
+      <p>Ops!!! seems you lost your connection</p>
+    </div>
+    <div v-if="loading" class="loader"></div>
      <div v-for="story in story" :key ="story.id">
      <header><h1 class="p-2"> {{story.title}}
      </h1>
@@ -27,24 +30,23 @@ export default {
         return{
           id: this.$route.params.id,
           story:null,
-           submitted: false,
-           hidden: true,
-            search: ''
+          submitted: false,
+          hidden: true,
+          search: '',
+          loading: true,
+          errored: false
         }
     },
-   
-  //  created () {
-  //      this.$http.get('http://127.0.0.1:8000/api/story/'+ this.id).then(function(data){
-  //          return data.json();
-  //      }).then(function(data){
-  //        this.story = data;
-  //      });
-  //  }
   mounted() {
   axios
     .get('https://kikiapp-api.herokuapp.com/api/story/'+ this.id)
     .then(response => {
        this.story = response.data
+    }).catch (error => {
+      console.log(error)
+      this.error = true
+    }).finally( () => {
+      this.loading = false
     })
   },
    
@@ -69,5 +71,22 @@ img{
     height: 220px;
     float: left;
   clear: both;
+}
+.loader {
+  border: 5px solid #9e9696a2; /* Light grey */
+  border-top: 5px solid rgb(121, 88, 88); /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.2s linear infinite;
+  margin:auto
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.content {
+    margin: 50px;
 }
 </style>
